@@ -1,0 +1,11 @@
+body {
+    background-image: url(./img/imagen-fondo.jpeg);
+}
+.form-title{
+    font-family: "Ballet", cursive;
+    font-weight: bold;
+}
+section{
+    background-color: rgba(209, 208, 208, 0.712);
+    box-shadow: 4px 4px 10px black;
+}
