@@ -1,7 +1,6 @@
 <?php
-include_once("conexion.php");
-require_once("models/Venta.php");
-require_once("models/Producto.php");
+require_once(__DIR__  . "/../models/Venta.php");
+require_once(__DIR__  . "/../models/Producto.php");
 if(isset($_POST)){
     $producto_id = $_POST["producto_id"];
     $cliente_id = $_POST["cliente_id"];

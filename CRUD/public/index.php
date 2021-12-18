@@ -10,7 +10,7 @@ require_once("views/templates/templateHeader.php");
             <a href="views/viewVentas.php" type="button" class="btn btn-success">Ventas</a>
         </div>   
         <div class="mt-4"> 
-            <a href="https://github.com/PatricioFlood/CodoaCodo/tree/main/CRUD" type="button" class="btn btn-info">Código en Github</a>
+            <a href="https://github.com/PatricioFlood/CodoaCodo/tree/main/CRUD" target="_blank" type="button" class="btn btn-info">Código en Github</a>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 <?php
 require_once("templates/templateHeader.php");
-require_once("../models/Cliente.php");
+require_once("../../models/Cliente.php");
 $cliente = Cliente::getCliente($_GET["id"]);
 ?>
     <div class="container py-4">
