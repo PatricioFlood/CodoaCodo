@@ -1,7 +1,7 @@
 <?php
-include_once (__DIR__  . "/../conexion.php");
-include_once(__DIR__  . "/Producto.php");
-include_once(__DIR__  . "/Cliente.php");
+include_once("../conexion.php");
+include_once("Producto.php");
+include_once("Cliente.php");
 class Venta
 {
     public static function crear($importe_total, $producto_id, $cliente_id, $stock_vendido){

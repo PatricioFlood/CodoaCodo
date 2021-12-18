@@ -1,8 +1,8 @@
 <?php
 require_once("templates/templateHeader.php");
-require_once("../../models/Producto.php");
-require_once("../../models/Cliente.php");
-require_once("../../models/Venta.php");
+require_once("../models/Producto.php");
+require_once("../models/Cliente.php");
+require_once("../models/Venta.php");
 $clientes = Cliente::getClientes();
 $productos = Producto::getProductos();
 $venta = Venta::getVenta($_GET["id"]);
@@ -51,7 +51,7 @@ $venta = Venta::getVenta($_GET["id"]);
             <div class="my-3 input-group">
             <span class="input-group-text" id="addon-wrapping">Importe Total</span>
                 <span class="input-group-text" id="addon-wrapping">$</span>
-                <input type="number" class="form-control" value="<?= $venta['importe_total'] ?>" id="precioTotal" disabled readonly>
+                <input type="number" class="form-control" value="<?= $venta['importe_total'] ?>" id="precioTotal" min="1" max="1" disabled readonly>
             </div>
             <button class="btn btn-primary">Guardar Cambios</button>
             <a href="viewVentas.php" class="btn btn-danger">Cancelar</a>
@@ -67,6 +67,7 @@ $venta = Venta::getVenta($_GET["id"]);
         cantidad.addEventListener('change', e => changeTotal())
         const changeTotal = () => {
             const producto = select.options[select.selectedIndex]
+            cantidad.setAttribute('max', parseInt(producto.dataset.stock))
             const precio = producto.dataset.precio
             precioTotal.value = parseFloat(precio) * parseInt(cantidad.value)
         }

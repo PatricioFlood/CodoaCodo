@@ -1,5 +1,5 @@
 <?php
-include_once (__DIR__  . "/../conexion.php");
+include_once("../conexion.php");
 class Cliente
 {
     public static function crear($nombre, $dni){
