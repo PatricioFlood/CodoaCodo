@@ -1,6 +1,6 @@
 <?php
 require_once("templates/templateHeader.php");
-require_once("../models/Producto.php");
+require_once("../../models/Producto.php");
 $productos = Producto::getProductos();
 ?>
     <div class="container py-4">

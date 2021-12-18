@@ -1,6 +1,5 @@
 <?php
-include_once("conexion.php");
-require_once("models/Cliente.php");
+require_once(__DIR__  . "/../models/Cliente.php");
 if(isset($_GET)){
     Cliente::eliminar($_GET["id"]);
     header("Location: /views/viewClientes.php");

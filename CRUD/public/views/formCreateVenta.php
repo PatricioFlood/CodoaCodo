@@ -1,7 +1,7 @@
 <?php
 require_once("templates/templateHeader.php");
-require_once("../models/Producto.php");
-require_once("../models/Cliente.php");
+require_once("../../models/Producto.php");
+require_once("../../models/Cliente.php");
 $clientes = Cliente::getClientes();
 $productos = Producto::getProductos();
 ?>
@@ -43,7 +43,7 @@ $productos = Producto::getProductos();
             <div class="my-3 input-group">
             <span class="input-group-text" id="addon-wrapping">Importe Total</span>
                 <span class="input-group-text" id="addon-wrapping">$</span>
-                <input type="number" class="form-control" value="" id="precioTotal" min="1" max="1" disabled readonly>
+                <input type="number" class="form-control" value="" id="precioTotal" disabled readonly>
             </div>
             <button class="btn btn-primary">Crear</button>
             <a href="viewVentas.php" class="btn btn-danger">Cancelar</a>
